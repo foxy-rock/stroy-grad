@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>СтройГрад — построим дом под ключ по фиксированной смете</title>
+    <meta
+      name="description"
+      content="Строительство домов и коммерческих объектов под ключ. Прозрачная смета, контроль каждого этапа и гарантия по договору. Получите бесплатную консультацию."
+    />
+    <meta name="theme-color" content="#10151f" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- 1. Шапка -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="#hero" class="logo">
+          <span class="logo__icon"><img src="./images//images.png" width="50px" alt=""></span>
+          <span class="logo__text"
+            ><span class="logo__accent">Строй</span> <span class="logo__primary">Град</span></span
+          >
+        </a>
+        <nav class="nav" id="nav">
+          <a href="#hero" class="nav__link">Главная</a>
+          <a href="#services" class="nav__link">Услуги</a>
+          <a href="#projects" class="nav__link">Проекты</a>
+          <a href="#process" class="nav__link">Этапы</a>
+          <a href="#calculator" class="nav__link">Калькулятор</a>
+          <a href="#contacts" class="nav__link">Контакты</a>
+        </nav>
+        <a href="#contacts" class="btn btn--primary header__cta"
+          >Оставить заявку</a
+        >
+        <button class="burger" id="burger" aria-label="Меню">
+          <span class="burger__span"></span><span class="burger__span"></span><span class="burger__span"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 2. Главный экран -->
+    <section class="hero" id="hero">
+      <div class="hero__bg"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge"
+            >🏗️ Строим с 2009 года · Работаем по договору</span
+          >
+          <h1 class="hero__title">
+            Ваш дом под ключ — <span class="accent">без сюрпризов в смете</span>
+          </h1>
+          <p class="hero__text">
+            Спроектируем и построим дом под ваш участок и бюджет. Смета и сроки
+            закреплены в договоре, ход работ можно контролировать онлайн.
+          </p>
+          <div class="hero__actions">
+            <a href="#calculator" class="btn btn--primary btn--lg"
+              >Рассчитать стоимость <span aria-hidden="true">→</span></a
+            >
+            <a href="#projects" class="btn btn--ghost btn--lg"
+              >Смотреть проекты</a
+            >
+          </div>
+          <div class="hero__proof" aria-label="Условия работы">
+            <span>✓ Бесплатный выезд инженера</span>
+            <span>✓ Поэтапная оплата</span>
+            <span>✓ Гарантия по договору</span>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <b data-count="480">0</b><span>сданных объектов</span>
+            </div>
+            <div class="hero__stat">
+              <b data-count="17">0</b><span>лет на рынке</span>
+            </div>
+            <div class="hero__stat">
+              <b data-count="98">0</b><span>% довольных клиентов</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__card glass">
+          <span class="hero__card-tag">Бесплатно и без обязательств</span>
+          <h3>Узнайте бюджет строительства</h3>
+          <p>
+            Оставьте номер — специалист обсудит задачу и подскажет следующий шаг
+          </p>
+          <form class="hero__form" data-form>
+            <label class="visually-hidden" for="heroPhone"
+              >Номер телефона</label
+            >
+            <input
+              id="heroPhone"
+              type="tel"
+              name="phone"
+              autocomplete="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+            <button type="submit" class="btn btn--primary btn--block">
+              Получить консультацию <span aria-hidden="true">→</span>
+            </button>
+          </form>
+          <small
+            >Нажимая кнопку, вы соглашаетесь на обработку персональных
+            данных.</small
+          >
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Вниз">↓</a>
+    </section>
+
+    <!-- 3. Преимущества -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Почему мы</span>
+          <h2 class="section__title">6 причин выбрать СтройГрад</h2>
+        </div>
+        <div class="grid grid--3">
+          <div class="adv-card reveal">
+            <div class="adv-card__icon">
+              <img src="./images/icons8-проект-50.png" alt="">
+            </div>
+            <h3>Собственное проектное бюро</h3>
+            <p>
+              Архитекторы и конструкторы в штате. Проект адаптируем под участок
+              и бюджет бесплатно.
+            </p>
+          </div>
+          <div class="adv-card reveal">
+            <div class="adv-card__icon"><img src="./images/icons8-документ-50.png" alt=""></div>
+            <h3>Фиксированная смета</h3>
+            <p>
+              Цена в договоре не меняется. Никаких «допов» в процессе
+              строительства.
+            </p>
+          </div>
+          <div class="adv-card reveal">
+            <div class="adv-card__icon"><img src="./images/icons8-календарь-50.png" alt=""></div>
+            <h3>Сроки по договору</h3>
+            <p>
+              Не сдаем в срок — платим неустойку 0,1% за каждый день просрочки.
+            </p>
+          </div>
+          <div class="adv-card reveal">
+            <div class="adv-card__icon"><img src="./images/icons8-рабочий-50.png" alt=""></div>
+            <h3>Свои бригады</h3>
+            <p>
+              Только штатные мастера с опытом от 5 лет. Без случайных
+              подрядчиков.
+            </p>
+          </div>
+          <div class="adv-card reveal">
+            <div class="adv-card__icon"><img src="./images/icons8-фотоаппарат-50.png" alt=""></div>
+            <h3>Фотоотчёты каждый день</h3>
+            <p>
+              Онлайн-чат с прорабом и ежедневные фото хода работ в личном
+              кабинете.
+            </p>
+          </div>
+          <div class="adv-card reveal">
+            <div class="adv-card__icon"><img src="./images/icons8-щит-50.png" alt=""></div>
+            <h3>Гарантия 10 лет</h3>
+            <p>
+              На конструктив, инженерию и отделку. Сервисная служба выезжает за
+              48 часов.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Услуги -->
+    <section class="section section--gray" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Услуги</span>
+          <h2 class="section__title">Что мы строим и делаем</h2>
+        </div>
+        <div class="grid grid--4">
+          <article class="service reveal">
+            <div class="service__img service__img--house" role="img" aria-label="Современный загородный дом"></div>
+            <div class="service__body">
+              <h3>Дома под ключ</h3>
+              <p>Кирпич, газобетон, каркас и брус. От 3 месяцев.</p>
+              <span class="service__price">от 35 000 ₽/м²</span>
+            </div>
+          </article>
+          <article class="service reveal">
+            <div class="service__img service__img--commercial" role="img" aria-label="Строительство коммерческого здания"></div>
+            <div class="service__body">
+              <h3>Коммерческие объекты</h3>
+              <p>Склады, магазины, офисные здания, АЗС.</p>
+              <span class="service__price">от 28 000 ₽/м²</span>
+            </div>
+          </article>
+          <article class="service reveal">
+            <div class="service__img service__img--repair" role="img" aria-label="Современная отделка интерьера"></div>
+            <div class="service__body">
+              <h3>Ремонт и отделка</h3>
+              <p>Косметический, капитальный, дизайнерский.</p>
+              <span class="service__price">от 6 500 ₽/м²</span>
+            </div>
+          </article>
+          <article class="service reveal">
+            <div class="service__img service__img--design" role="img" aria-label="Архитектурное проектирование дома"></div>
+            <div class="service__body">
+              <h3>Проектирование</h3>
+              <p>АР, КР, инженерные сети, 3D-визуализация.</p>
+              <span class="service__price">от 900 ₽/м²</span>
+            </div>
+          </article>
+          <article class="service reveal">
+            <div class="service__img service__img--foundation" role="img" aria-label="Строительство фундамента"></div>
+            <div class="service__body">
+              <h3>Фундаменты и заборы</h3>
+              <p>Плитные, ленточные, свайные. Заборы любой сложности.</p>
+              <span class="service__price">от 4 200 ₽/м²</span>
+            </div>
+          </article>
+          <article class="service reveal">
+            <div class="service__img service__img--engineering" role="img" aria-label="Инженерные системы в доме"></div>
+            <div class="service__body">
+              <h3>Инженерные сети</h3>
+              <p>Отопление, водоснабжение, канализация, электрика.</p>
+              <span class="service__price">от 2 800 ₽/м²</span>
+            </div>
+          </article>
+          <article class="service reveal">
+            <div class="service__img service__img--landscape" role="img" aria-label="Благоустроенный участок загородного дома"></div>
+            <div class="service__body">
+              <h3>Благоустройство</h3>
+              <p>Дорожки, беседки, дренаж, озеленение участка.</p>
+              <span class="service__price">от 1 500 ₽/м²</span>
+            </div>
+          </article>
+          <article class="service reveal">
+            <div class="service__img service__img--interior" role="img" aria-label="Дизайн современного интерьера"></div>
+            <div class="service__body">
+              <h3>Дизайн-проект</h3>
+              <p>Планировки, 3D-визуализация, подбор материалов.</p>
+              <span class="service__price">от 1 200 ₽/м²</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Проекты -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Портфолио</span>
+          <h2 class="section__title">Реализованные проекты</h2>
+        </div>
+        <div class="filter reveal" id="filter">
+          <button class="filter__btn active" data-filter="all">Все</button>
+          <button class="filter__btn" data-filter="house">Дома</button>
+          <button class="filter__btn" data-filter="commercial">
+            Коммерческие
+          </button>
+          <button class="filter__btn" data-filter="repair">Ремонт</button>
+        </div>
+        <div class="grid grid--3" id="projectsGrid">
+          <article class="project reveal" data-cat="house">
+            <div class="project__img p1" role="img" aria-label="Загородный коттедж">
+              <span class="project__tag">Дом · 210 м²</span>
+            </div>
+            <div class="project__body">
+              <h3>Коттедж «Икеа» в ЖК Северный</h3>
+              <p>Газобетон, скатная кровля, срок — 5 месяцев</p>
+            </div>
+          </article>
+          <article class="project reveal" data-cat="commercial">
+            <div class="project__img p2" role="img" aria-label="Современное коммерческое здание">
+              <span class="project__tag">Склад · 1 800 м²</span>
+            </div>
+            <div class="project__body">
+              <h3>Логистический комплекс «ТрансЛайн»</h3>
+              <p>Металлокаркас, срок — 8 месяцев</p>
+            </div>
+          </article>
+          <article class="project reveal" data-cat="house">
+            <div class="project__img p3" role="img" aria-label="Дом из дерева среди природы">
+              <span class="project__tag">Дом · 145 м²</span>
+            </div>
+            <div class="project__body">
+              <h3>Брусовой дом у озера</h3>
+              <p>Клеёный брус, панорамные окна</p>
+            </div>
+          </article>
+          <article class="project reveal" data-cat="repair">
+            <div class="project__img p4" role="img" aria-label="Современный интерьер квартиры">
+              <span class="project__tag">Квартира · 92 м²</span>
+            </div>
+            <div class="project__body">
+              <h3>Капитальный ремонт в сталинке</h3>
+              <p>Дизайнерская отделка, срок — 3,5 месяца</p>
+            </div>
+          </article>
+          <article class="project reveal" data-cat="commercial">
+            <div class="project__img p5" role="img" aria-label="Фасад коммерческого объекта">
+              <span class="project__tag">Магазин · 320 м²</span>
+            </div>
+            <div class="project__body">
+              <h3>Супермаркет «Пятёрочка»</h3>
+              <p>Витражное остекление, сдача за 4 месяца</p>
+            </div>
+          </article>
+          <article class="project reveal" data-cat="house">
+            <div class="project__img p6" role="img" aria-label="Загородный дом в современном стиле">
+              <span class="project__tag">Дом · 260 м²</span>
+            </div>
+            <div class="project__body">
+              <h3>Кирпичный особняк в Барвихе</h3>
+              <p>Классика, цокольный этаж, бассейн</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Этапы работы -->
+    <section class="section section--gray" id="process">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Как мы работаем</span>
+          <h2 class="section__title">6 этапов от идеи до ключей</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Заявка и консультация</h3>
+            <p>Обсуждаем задачу, бюджет и сроки. Бесплатно.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Выезд на участок</h3>
+            <p>Инженер оценивает грунт, подъезд, коммуникации.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">03</span>
+            <h3>Проект и смета</h3>
+            <p>Готовим проект, точную смету и график работ.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">04</span>
+            <h3>Договор</h3>
+            <p>Фиксируем цену, сроки, гарантии и штрафы.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">05</span>
+            <h3>Строительство</h3>
+            <p>Работаем по графику, ежедневные фотоотчёты.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">06</span>
+            <h3>Сдача объекта</h3>
+            <p>Акт приёмки, пакет документов, гарантия 10 лет.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. О компании -->
+    <section class="section" id="company">
+      <div class="container about">
+        <div class="about__media reveal">
+          <img class="about__img" src="./images/photo-1503387762-592deb58ef4e.avif" alt="Строительная команда на объекте" loading="lazy">
+          <div class="about__exp"><b>17</b><span>лет опыта</span></div>
+        </img>
+        <div class="about__content">
+          <span class="section__tag reveal">О компании</span>
+          <h2 class="section__title reveal">
+            Строим так, как строили бы для себя
+          </h2>
+          <p class="reveal">
+            «СтройГрад» — строительная компания полного цикла. С 2009 года мы
+            построили более 480 объектов: частные дома, таунхаусы, склады,
+            магазины и офисные здания.
+          </p>
+          <ul class="about__list">
+            <li class="reveal">✔ Собственный парк техники: 24 единицы</li>
+            <li class="reveal">✔ Штат из 120 специалистов</li>
+            <li class="reveal">
+              ✔ Склад материалов — закупка без наценки посредников
+            </li>
+            <li class="reveal">✔ Член СРО, все допуски и страховки</li>
+          </ul>
+          <div class="about__signatures">
+            <div class="sig reveal">
+              <b>Иванов Сергей</b><span>главный инженер</span>
+            </div>
+            <div class="sig reveal">
+              <b>Петрова Анна</b><span>архитектор, 12 лет в профессии</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Калькулятор -->
+    <section class="section section--dark" id="calculator">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag section__tag--light">Калькулятор</span>
+          <h2 class="section__title section__title--light">
+            Рассчитайте стоимость за 30 секунд
+          </h2>
+        </div>
+        <div class="calc glass reveal">
+          <div class="calc__row">
+            <label
+              >Тип объекта
+              <select id="calcType">
+                <option value="35000">Дом / коттедж — 35 000 ₽/м²</option>
+                <option value="28000">Коммерческий объект — 28 000 ₽/м²</option>
+                <option value="6500">Ремонт — 6 500 ₽/м²</option>
+              </select>
+            </label>
+            <label
+              >Площадь: <output id="areaOut">100</output> м²
+              <input
+                type="range"
+                id="calcArea"
+                min="20"
+                max="500"
+                value="100"
+                step="5"
+              />
+            </label>
+            <label
+              >Комплектация
+              <select id="calcKit">
+                <option value="1">Коробка</option>
+                <option value="1.25">Тёплый контур</option>
+                <option value="1.45" selected>Под ключ</option>
+              </select>
+            </label>
+          </div>
+          <div class="calc__result">
+            <div>
+              <span>Предварительная стоимость</span
+              ><b id="calcPrice">5 075 000 ₽</b>
+            </div>
+            <small id="calcHint"
+              >Расчёт ориентировочный. Точную смету подготовим после обсуждения
+              проекта и участка.</small
+            >
+            <a href="#contacts" class="btn btn--primary"
+              >Получить точную смету <span aria-hidden="true">→</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Материалы -->
+    <section class="section" id="materials">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Технологии</span>
+          <h2 class="section__title">Из чего мы строим</h2>
+        </div>
+        <div class="tabs reveal">
+          <div class="tabs__nav" id="tabsNav">
+            <button class="tabs__btn active" data-tab="0">Кирпич</button>
+            <button class="tabs__btn" data-tab="1">Газобетон</button>
+            <button class="tabs__btn" data-tab="2">Каркас</button>
+            <button class="tabs__btn" data-tab="3">Брус</button>
+          </div>
+          <div class="tabs__panel glass" id="tabsPanel">
+            <div class="tab active">
+              <h3><img src="./images/icons8-высокое-качество-48.png" alt=""> Кирпич</h3>
+              <p>
+                Классика на века. Срок службы 100+ лет, отличная шумоизоляция и
+                пожаробезопасность. Идеален для больших домов в классическом
+                стиле.
+              </p>
+              <ul>
+                <li>Срок службы: 100+ лет</li>
+                <li>Тепло: ★★★☆☆</li>
+                <li>Цена: ★★★★☆</li>
+              </ul>
+            </div>
+            <div class="tab">
+              <h3><img src="./images/icons8-высокое-качество-48.png" alt=""> Газобетон</h3>
+              <p>
+                Оптимальное соотношение цены и скорости. Лёгкие блоки не требуют
+                тяжёлого фундамента, дом тёплый и «дышит».
+              </p>
+              <ul>
+                <li>Срок службы: 70+ лет</li>
+                <li>Тепло: ★★★★☆</li>
+                <li>Цена: ★★★☆☆</li>
+              </ul>
+            </div>
+            <div class="tab">
+              <h3><img src="./images/icons8-высокое-качество-48.png" alt=""> Каркас</h3>
+              <p>
+                Самая быстрая технология — дом под ключ за 2–3 месяца. Тёплый,
+                лёгкий, позволяет любую планировку.
+              </p>
+              <ul>
+                <li>Срок службы: 50+ лет</li>
+                <li>Тепло: ★★★★★</li>
+                <li>Цена: ★★☆☆☆</li>
+              </ul>
+            </div>
+            <div class="tab">
+              <h3><img src="./images/icons8-высокое-качество-48.png" alt=""> Брус</h3>
+              <p>
+                Живой деревянный дом с уникальным микроклиматом. Клеёный брус не
+                даёт усадки — отделку можно сразу.
+              </p>
+              <ul>
+                <li>Срок службы: 60+ лет</li>
+                <li>Тепло: ★★★★☆</li>
+                <li>Цена: ★★★☆☆</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Отзывы -->
+    <section class="section section--gray" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Отзывы</span>
+          <h2 class="section__title">Что говорят наши клиенты</h2>
+        </div>
+        <div class="slider" id="reviewsSlider">
+          <div class="slider__track" id="sliderTrack">
+            <div class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>
+                «Дом сдали на 2 недели раньше срока, смета не выросла ни на
+                рубль. Прораб Сергей на связи 24/7 — чувство, что у тебя личный
+                строитель.»
+              </p>
+              <div class="review__author">
+                <div class="review__avatar">АК</div>
+                <div>
+                  <b>Алексей Ковалёв</b><span>дом 180 м², Газобетон</span>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>
+                «Заказывали склад 1 200 м². Всё чётко: проект, согласования,
+                стройка. Через год эксплуатации — ни одной претензии. Рекомендую
+                как подрядчика.»
+              </p>
+              <div class="review__author">
+                <div class="review__avatar review__avatar--blue">МЛ</div>
+                <div><b>Марина Логинова</b><span>склад «ТрансЛайн»</span></div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__stars">★★★★★</div>
+              <p>
+                «Боялись ремонта, начитавшись историй про «допы». Здесь всё
+                наоборот: смета в договоре, чеки за материалы, уборка после
+                смены. Квартира — конфетка.»
+              </p>
+              <div class="review__author">
+                <div class="review__avatar review__avatar--green">ДС</div>
+                <div>
+                  <b>Дмитрий и Ольга Смирновы</b><span>ремонт 92 м²</span>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review__stars">★★★★☆</div>
+              <p>
+                «Строили брусовой дом. Небольшая задержка с окнами, но
+                предупредили заранее и компенсировали отделкой потолка. Итогом
+                очень довольны.»
+              </p>
+              <div class="review__author">
+                <div class="review__avatar review__avatar--orange">ЕВ</div>
+                <div><b>Егор Васильев</b><span>дом 145 м², брус</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__nav">
+            <button class="slider__arrow" id="prevSlide">←</button>
+            <div class="slider__dots" id="sliderDots"></div>
+            <button class="slider__arrow" id="nextSlide">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. FAQ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="section__tag">FAQ</span>
+          <h2 class="section__title">Частые вопросы</h2>
+        </div>
+        <div class="faq reveal" id="faqList">
+          <details class="faq__item">
+            <summary>Сколько стоит построить дом 100 м²?</summary>
+            <p>
+              В среднем 3,5–4,5 млн ₽ «под ключ» в зависимости от технологии и
+              региона. Воспользуйтесь калькулятором выше или оставьте заявку —
+              посчитаем точно.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>Можно ли строить зимой?</summary>
+            <p>
+              Да. Современные технологии (противоморозные добавки, тепляки)
+              позволяют вести бетонные работы до −15 °C. Зимой часто даже
+              выгоднее — скидки на материалы.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>Что входит в цену «под ключ»?</summary>
+            <p>
+              Фундамент, стены, кровля, окна, двери, инженерные сети, черновая и
+              чистовая отделка. Заезжай и живи.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>Как контролировать ход строительства?</summary>
+            <p>
+              Личный кабинет с фотоотчётами каждый день, чат с прорабом, а также
+              можно приехать на объект в любой момент без предупреждения.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>Работаете ли вы с ипотекой и маткапиталом?</summary>
+            <p>
+              Да, сотрудничаем с 14 банками, оформляем все документы для ипотеки
+              под строительство и маткапитала.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>Что если бригада сорвёт сроки?</summary>
+            <p>
+              По договору платим неустойку 0,1% от суммы за каждый день
+              просрочки. За 17 лет неустойку платили дважды — и добровольно.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Контакты / футер -->
+    <footer class="footer" id="contacts">
+      <div class="container footer__grid">
+        <div class="footer__col">
+          <a href="#hero" class="logo logo--light"
+            >🏗️ Строй<span class="logo__accent">Град</span></a
+          >
+          <p>
+            Строительная компания полного цикла. Дома, коммерческие объекты,
+            ремонт под ключ.
+          </p>
+          <div class="footer__socials">
+            <a href="#" title="Telegram">✈️</a
+            ><a href="#" title="WhatsApp">💬</a><a href="#" title="VK">🅥</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Услуги</h4>
+          <a href="#services">Дома под ключ</a>
+          <a href="#services">Коммерческие объекты</a>
+          <a href="#services">Ремонт и отделка</a>
+          <a href="#services">Проектирование</a>
+        </div>
+        <div class="footer__col">
+          <h4>Компания</h4>
+          <a href="#company">О нас</a>
+          <a href="#projects">Наши проекты</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#faq">Вопросы и ответы</a>
+        </div>
+        <div class="footer__col footer__cta">
+          <h4>Свяжитесь с нами</h4>
+          <a href="tel:+74950000000" class="footer__phone"
+            >+7 (495) 000-00-00</a
+          >
+          <p>г. Москва, ул. Строителей, 15<br />Пн–Сб: 9:00–19:00</p>
+          <form class="footer__form" data-form>
+            <input type="tel" name="phone" placeholder="Ваш телефон" required />
+            <button type="submit" class="btn btn--primary">
+              Заказать звонок
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <span>© 2009–2026 СтройГрад. Все права защищены.</span>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
