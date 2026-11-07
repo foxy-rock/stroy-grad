@@ -123,54 +123,81 @@ tabBtns.forEach((btn) =>
   }),
 );
 
-/* ====== Слайдер отзывов ====== */
 const track = document.getElementById("sliderTrack");
-const slides = track.children.length;
 const dotsBox = document.getElementById("sliderDots");
+const slider = document.getElementById("reviewsSlider");
+
+const slides = track.children.length;
 
 let cur = 0;
+let visibleSlides = 2;
+let auto = null;
 
-const visibleSlides = 2;
-const maxSlide = Math.max(0, slides - visibleSlides);
+const getVisible = () =>
+  window.matchMedia("(max-width: 768px)").matches ? 1 : 2;
 
-for (let i = 0; i <= maxSlide; i++) {
-  const d = document.createElement("span");
+const getMaxSlide = () => Math.max(0, slides - visibleSlides);
 
-  if (i === 0) d.classList.add("active");
-
-  d.addEventListener("click", () => go(i));
-
-  dotsBox.appendChild(d);
+function buildDots() {
+  dotsBox.innerHTML = "";
+  for (let i = 0; i <= getMaxSlide(); i++) {
+    const d = document.createElement("span");
+    if (i === cur) d.classList.add("active");
+    d.addEventListener("click", () => go(i));
+    dotsBox.appendChild(d);
+  }
 }
 
 function go(i) {
-  cur = (i + maxSlide + 1) % (maxSlide + 1);
+  const max = getMaxSlide();
+  cur = (i + max + 1) % (max + 1);
 
-  track.style.transform = `translateX(-${cur * 50}%)`;
+  // ширина одного слайда в % от ширины трека
+  const step = 100 / visibleSlides;
+  track.style.transform = `translateX(-${cur * step}%)`;
 
   dotsBox.querySelectorAll("span").forEach((d, n) => {
     d.classList.toggle("active", n === cur);
   });
 }
 
+function syncLayout() {
+  const v = getVisible();
+  if (v !== visibleSlides) {
+    visibleSlides = v;
+    cur = 0;
+    buildDots();
+    go(0);
+  }
+}
+
+function startAuto() {
+  stopAuto();
+  auto = setInterval(() => go(cur + 1), 6000);
+}
+function stopAuto() {
+  if (auto) clearInterval(auto);
+  auto = null;
+}
+
+// init
+visibleSlides = getVisible();
+buildDots();
+go(0);
+startAuto();
+
 document
   .getElementById("prevSlide")
   .addEventListener("click", () => go(cur - 1));
-
 document
   .getElementById("nextSlide")
   .addEventListener("click", () => go(cur + 1));
 
-let auto = setInterval(() => go(cur + 1), 6000);
+slider.addEventListener("mouseenter", stopAuto);
+slider.addEventListener("mouseleave", startAuto);
 
-document
-  .getElementById("reviewsSlider")
-  .addEventListener("mouseenter", () => clearInterval(auto));
-
-document.getElementById("reviewsSlider").addEventListener("mouseleave", () => {
-  clearInterval(auto);
-  auto = setInterval(() => go(cur + 1), 6000);
-});
+window.addEventListener("resize", syncLayout);
+window.matchMedia("(max-width: 768px)").addEventListener("change", syncLayout);
 
 /* ======== Демо-обработка формы ======== */
 document.querySelectorAll("[data-form]").forEach((form) => {
